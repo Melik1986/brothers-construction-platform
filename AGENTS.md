@@ -16,3 +16,4 @@ Rules for coding agents working in this repository.
 - Do not disable lint/format rules or add broad ignores to make a check pass. Exceptions must be narrow (one path + one rule) with a written reason, as in `.rumdl.toml` and `_typos.toml`.
 - Never commit secrets or credentials. `betterleaks` scans staged files and the full tree; treat any finding as blocking.
 - Documentation is the product spec right now: keep Markdown style consistent with `.rumdl.toml` rules.
+- This is the PUBLIC showcase repository. The single working copy of the project is the private repo `brothers-core`: all development and documentation edits happen there. This repo receives only sanitized, approved public snapshots — do not commit internal implementation details, secrets, or credentials here.
