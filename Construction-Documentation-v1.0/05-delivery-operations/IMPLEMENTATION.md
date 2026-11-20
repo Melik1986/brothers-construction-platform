@@ -1,9 +1,9 @@
 # IMPLEMENTATION-001 — План реализации системы
 
-**Проект:** «Братья» / եղբայրներ  
-**Версия:** 0.2  
-**Статус:** Draft  
-**Тип документа:** Implementation Plan  
+**Проект:** «Братья» / եղբայրներ
+**Версия:** 0.2
+**Статус:** Draft
+**Тип документа:** Implementation Plan
 **Связанные документы:** BRD-001, SRS-001, SAD-001, API-001, DATA-001, ADR-001, DEPLOY-001, OPS-001, TECH-001, TEST-001
 
 ---
@@ -1057,7 +1057,6 @@ PR-Agent используется только как advisory-инструме�
 
 **Итог:** IMPLEMENTATION-001 v0.2 задаёт последовательность реализации MVP от подготовки репозитория до production deployment. Документ не утверждает, что инфраструктура уже создана или что все открытые технические вопросы решены.
 
-
 ## 23. Consolidated Supplement — Details Retained from v0.1
 
 This section preserves implementation details from the earlier v0.1 plan that complement v0.2 and are not repeated in the main roadmap. The main phases and acceptance criteria in sections 1–22 remain authoritative.
@@ -1172,9 +1171,9 @@ The v0.1 document included example SQL definitions for `bot_users`, `telegram_up
 
 ## 24. Document Status
 
-**Version:** 0.3  
-**Status:** Draft — Consolidated  
-**Owner:** Project Owner  
+**Version:** 0.3
+**Status:** Draft — Consolidated
+**Owner:** Project Owner
 **Approval:** Pending
 
 IMPLEMENTATION-001 v0.3 consolidates the v0.2 system implementation plan with complementary scope, API baselines, service identities, AI provider candidate, reminder cadence, and failure-simulation details from v0.1. It is a target plan and does not claim that the infrastructure or features are already implemented or tested.

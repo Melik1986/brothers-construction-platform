@@ -1,13 +1,13 @@
 # DATA-001 — Data Model & Database Specification
 
-**Проект:** «Братья» / եղբայրներ  
-**Документ:** DATA-001  
-**Версия:** 0.2  
-**Статус:** Draft — Technical Consistency Update  
-**Дата:** 19.11.2026  
-**База данных:** Neon PostgreSQL  
-**ORM:** Drizzle ORM  
-**Migration Tool:** Drizzle Kit  
+**Проект:** «Братья» / եղբայրներ
+**Документ:** DATA-001
+**Версия:** 0.2
+**Статус:** Draft — Technical Consistency Update
+**Дата:** 19.11.2026
+**База данных:** Neon PostgreSQL
+**ORM:** Drizzle ORM
+**Migration Tool:** Drizzle Kit
 **Источник истины:** PostgreSQL
 
 ---

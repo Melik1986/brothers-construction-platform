@@ -1,11 +1,11 @@
 # TEST-001 — Testing & Quality Assurance Strategy
 
-**Project:** «Братья» / «եղբայրներ»  
-**Document ID:** TEST-001  
-**Version:** 0.1  
-**Status:** Draft  
-**Document Type:** Testing & Quality Assurance Strategy  
-**Related Documents:** BRD-001, SRS-001, SAD-001, UX-001, API-001 / DATA-001, ADR-001  
+**Project:** «Братья» / «եղբայրներ»
+**Document ID:** TEST-001
+**Version:** 0.1
+**Status:** Draft
+**Document Type:** Testing & Quality Assurance Strategy
+**Related Documents:** BRD-001, SRS-001, SAD-001, UX-001, API-001 / DATA-001, ADR-001
 **Architecture:** Astro + TypeScript + Cloudflare Workers + Neon PostgreSQL + Cloudflare R2
 
 ---

@@ -1,9 +1,9 @@
 # TECH-001 — Telegram Bots Technical Architecture
 
-**Проект:** «Братья» / եղբայրներ  
-**Документ:** TECH-001  
-**Версия:** 0.2  
-**Статус:** Draft — Technical Consistency Update  
+**Проект:** «Братья» / եղբայրներ
+**Документ:** TECH-001
+**Версия:** 0.2
+**Статус:** Draft — Technical Consistency Update
 **Дата:** 19.11.2026
 
 ---

@@ -2,8 +2,8 @@
 
 ## БРАТЬЯ / եղբայրներ
 
-**Version:** 0.2  
-**Date:** 17.11.2026  
+**Version:** 0.2
+**Date:** 17.11.2026
 **Status:** Draft — Updated Business & UX Baseline
 
 ### 1. Brand Identity

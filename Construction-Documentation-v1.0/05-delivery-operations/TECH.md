@@ -1,10 +1,10 @@
 # TECH-001 — Telegram Bots & Automation Architecture
 
-**Project:** «Братья» / եղբայրներ  
-**Document ID:** TECH-001  
-**Version:** 0.1  
-**Status:** Draft  
-**Document Type:** Technical Architecture Specification  
+**Project:** «Братья» / եղբայրներ
+**Document ID:** TECH-001
+**Version:** 0.1
+**Status:** Draft
+**Document Type:** Technical Architecture Specification
 **Related Documents:** BRD-001, SRS-001, SAD-001, IA-001, API-001, DATA-001, ADR-001, TEST-001, DEPLOY-001, OPS-001
 
 ---
@@ -1284,9 +1284,9 @@ tests/
 
 ## 20. Document Status
 
-**Version:** 0.1  
-**Status:** Draft  
-**Owner:** Project Owner  
+**Version:** 0.1
+**Status:** Draft
+**Owner:** Project Owner
 **Approval:** Pending technical validation
 
 TECH-001 является техническим продолжением OPS-001 и определяет архитектуру Telegram automation.

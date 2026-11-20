@@ -1,14 +1,14 @@
 # API-001 — API Specification
 
-**Проект:** «Братья» / եղբայրներ  
-**Документ:** API-001  
-**Версия:** 0.3 — Consolidated Specification  
-**Статус:** Draft — Consolidated API Specification  
-**Дата:** 20.11.2026  
-**Runtime:** Cloudflare Workers  
-**Database:** Neon PostgreSQL  
-**Validation:** Zod  
-**API Version:** v1  
+**Проект:** «Братья» / եղբայրներ
+**Документ:** API-001
+**Версия:** 0.3 — Consolidated Specification
+**Статус:** Draft — Consolidated API Specification
+**Дата:** 20.11.2026
+**Runtime:** Cloudflare Workers
+**Database:** Neon PostgreSQL
+**Validation:** Zod
+**API Version:** v1
 **Base Path:** `/api/v1/`
 
 > **Consolidation note (v0.3):** This document supersedes the earlier combined API/Database draft and API-001 v0.2 Technical Consistency Update. API contracts are the single source for Public API, Telegram Webhooks, Internal API, application-service boundaries, security, idempotency, Outbox/Queues, notifications and acceptance criteria. Database entities, relationships, indexes, constraints and SQL/Drizzle details belong exclusively to **DATA-001**. Persistence behavior is referenced here without duplicating the complete schema or implying an existing Drizzle implementation. Earlier future deals/payments/commissions concepts are roadmap items to evaluate in DATA-001/business planning—not approved or implemented API endpoints.
@@ -1082,15 +1082,18 @@ API-001 считается реализованным, когда:
 ## 18. Consolidation & Document Boundaries
 
 ### 18.1 Single source of truth
+
 - **API-001 v0.3** defines endpoint contracts, request/response behavior, validation, authentication, authorization, errors, idempotency, API workflows, webhook handling, queue/notification integration and acceptance criteria.
 - **DATA-001** defines persistence: entities, columns, types, primary/foreign keys, constraints, indexes, relationships, retention, and SQL/Drizzle schema.
 - API-001 does not maintain a second full SQL DDL or independent database schema. Persisted fields are governed by DATA-001.
 - Conflicts between API behavior and DATA-001 must be recorded and resolved through a versioned change, not inferred silently.
 
 ### 18.2 Earlier combined API/Database draft
+
 The earlier draft covered Public Lead API plus database model and future deals/payments/commissions. Database detail is moved to/maintained in DATA-001. Deals/payments/commissions remain roadmap concepts unless explicitly accepted into MVP scope. Their presence in the earlier draft does not mean tables or endpoints are approved or implemented.
 
 ### 18.3 Consolidated scope
+
 1. Public Lead API and Health Check.
 2. Telegram webhooks for Lead Management and Incident & Operations bots.
 3. Internal Lead Management operations.
@@ -1102,6 +1105,7 @@ The earlier draft covered Public Lead API plus database model and future deals/p
 9. Correlation, logging, test requirements, acceptance criteria and open decisions.
 
 ### 18.4 Implementation status
+
 Repository, runtime code, PostgreSQL database and actual Drizzle schema have not been created. Endpoint contracts and persistence references are specifications only. Drizzle schema validation and migration review are implementation-stage checkpoints.
 
 ## 19. Связанные документы

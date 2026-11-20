@@ -2,18 +2,18 @@
 
 ## БРАТЬЯ / եղբայրներ
 
-**Version:** 0.1  
-**Date:** 17.11.2026  
-**Status:** Draft  
+**Version:** 0.1
+**Date:** 17.11.2026
+**Status:** Draft
 **Related Documents:** BRD-001, SRS-001, SAD-001, IA-001
 
 ---
 
-# 1. UX OBJECTIVE
+## 1. UX OBJECTIVE
 
 Design a premium architectural digital experience that communicates construction expertise, showcases completed projects and converts visitors into qualified leads.
 
-## 1.1. UX Principles
+### 1.1. UX Principles
 
 1. Visual First.
 2. Clarity.
@@ -22,7 +22,7 @@ Design a premium architectural digital experience that communicates construction
 5. Consistency.
 6. Performance.
 
-# 2. USER PERSONAS
+## 2. USER PERSONAS
 
 ### Persona A — Private Homeowner
 
@@ -35,7 +35,7 @@ Needs:
 
 Primary action: Request a consultation.
 
-### Persona B — Armenian Diaspora
+#### Persona B — Armenian Diaspora
 
 Needs:
 
@@ -46,7 +46,7 @@ Needs:
 
 Primary action: Arrange an online consultation.
 
-### Persona C — Commercial Client
+#### Persona C — Commercial Client
 
 Needs:
 
@@ -57,25 +57,25 @@ Needs:
 
 Primary action: Submit a commercial project inquiry.
 
-# 3. USER JOURNEYS
+## 3. USER JOURNEYS
 
 ### Journey A — Organic Search
 
 Google Search → Service Page → Projects → Case Study → CTA → Lead.
 
-### Journey B — Portfolio Discovery
+#### Journey B — Portfolio Discovery
 
 Homepage → Projects → Project Detail → Before/After → Related Service → Contact.
 
-### Journey C — Diaspora
+#### Journey C — Diaspora
 
 Search / Social Media → Localized Website → Portfolio → Remote Collaboration Information → WhatsApp / Telegram → Lead.
 
-### Journey D — Commercial
+#### Journey D — Commercial
 
 Search → Commercial Services → Relevant Projects → Company Information → Consultation → Lead.
 
-# 4. USER FLOW REQUIREMENTS
+## 4. USER FLOW REQUIREMENTS
 
 - Every major page must expose a relevant conversion action.
 - Contact channels must be accessible without mandatory form submission.
@@ -85,9 +85,9 @@ Search → Commercial Services → Relevant Projects → Company Information →
 - Project navigation must expose related projects and services.
 - No forced account registration.
 
-# 5. WIREFRAME SPECIFICATIONS
+## 5. WIREFRAME SPECIFICATIONS
 
-## 5.1 Homepage
+### 5.1 Homepage
 
 1. Header.
 2. Hero Image / Video.
@@ -103,7 +103,7 @@ Search → Commercial Services → Relevant Projects → Company Information →
 12. Final CTA.
 13. Footer.
 
-## 5.2 Service Detail
+### 5.2 Service Detail
 
 1. Breadcrumbs.
 2. Service Hero.
@@ -116,7 +116,7 @@ Search → Commercial Services → Relevant Projects → Company Information →
 9. FAQ.
 10. CTA.
 
-## 5.3 Project Detail
+### 5.3 Project Detail
 
 1. Project Hero.
 2. Project Metadata.
@@ -132,7 +132,7 @@ Search → Commercial Services → Relevant Projects → Company Information →
 
 Optional blocks must not render when content is unavailable.
 
-## 5.4 Contact Page
+### 5.4 Contact Page
 
 - Contact details.
 - WhatsApp.
@@ -143,7 +143,7 @@ Optional blocks must not render when content is unavailable.
 - Service selection.
 - Location information.
 
-# 6. LEAD FORM UX
+## 6. LEAD FORM UX
 
 Required fields:
 
@@ -172,7 +172,7 @@ A successful lead submission must be confirmed by the backend.
 
 Direct messaging actions must be tracked separately from successfully registered leads.
 
-# 7. INTERACTION DESIGN
+## 7. INTERACTION DESIGN
 
 ### Navigation
 
@@ -182,7 +182,7 @@ Direct messaging actions must be tracked separately from successfully registered
 - CTA.
 - Accessible keyboard controls.
 
-### Media
+#### Media
 
 - Responsive gallery.
 - Lightbox.
@@ -190,7 +190,7 @@ Direct messaging actions must be tracked separately from successfully registered
 - Lazy-loaded video.
 - Optional 3D viewer.
 
-### Animation
+#### Animation
 
 - CSS transitions.
 - GSAP ScrollTrigger where justified.
@@ -198,25 +198,25 @@ Direct messaging actions must be tracked separately from successfully registered
 - No mandatory smooth scrolling.
 - No animation blocking initial rendering.
 
-# 8. FIGMA FILE STRUCTURE
+## 8. FIGMA FILE STRUCTURE
 
 Main file: BRATYA — Digital Platform.
 
 Pages:
 
-00 — Cover & Documentation  
-01 — Brand Identity  
-02 — Design Tokens  
-03 — Foundations  
-04 — Components  
-05 — Desktop 1440  
-06 — Tablet 768  
-07 — Mobile 390  
-08 — Interactions & Prototypes  
-09 — Developer Handoff  
+00 — Cover & Documentation
+01 — Brand Identity
+02 — Design Tokens
+03 — Foundations
+04 — Components
+05 — Desktop 1440
+06 — Tablet 768
+07 — Mobile 390
+08 — Interactions & Prototypes
+09 — Developer Handoff
 10 — Archive
 
-## 8.1 Design Foundations
+### 8.1 Design Foundations
 
 Color:
 
@@ -245,7 +245,7 @@ Grid:
 - Tablet: 8 columns.
 - Mobile: 4 columns.
 
-## 8.2 Component Library
+### 8.2 Component Library
 
 Navigation:
 
@@ -288,7 +288,7 @@ Forms:
 - Success.
 - Error.
 
-## 8.3 Naming Convention
+### 8.3 Naming Convention
 
 ```text
 Button/Primary
@@ -310,7 +310,7 @@ Form/Input/Error
 Form/Input/Success
 ```
 
-# 9. RESPONSIVE DESIGN
+## 9. RESPONSIVE DESIGN
 
 Primary design frames:
 
@@ -328,7 +328,7 @@ Additional validation:
 
 Mobile layouts must be independently optimized.
 
-# 10. ACCESSIBILITY
+## 10. ACCESSIBILITY
 
 Target: WCAG 2.2 AA.
 
@@ -343,7 +343,7 @@ Requirements:
 - Reduced motion.
 - Form error announcements.
 
-# 11. ASTRO IMPLEMENTATION MAPPING
+## 11. ASTRO IMPLEMENTATION MAPPING
 
 ```text
 Header                 → Header.astro
@@ -359,7 +359,7 @@ Services Section       → ServicesSection.astro
 
 Use React Islands only where interactive complexity justifies them.
 
-# 12. DESIGN HANDOFF
+## 12. DESIGN HANDOFF
 
 Every approved component must include:
 
@@ -373,7 +373,7 @@ Every approved component must include:
 - Accessibility requirements.
 - Astro implementation reference.
 
-# 13. ACCEPTANCE CRITERIA
+## 13. ACCEPTANCE CRITERIA
 
 UX-001 is accepted when:
 

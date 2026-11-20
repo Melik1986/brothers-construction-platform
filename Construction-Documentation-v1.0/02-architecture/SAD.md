@@ -1,9 +1,9 @@
 # SAD-001 — System Architecture Specification
 
-**Проект:** «Братья» / եղբայրներ  
-**Документ:** SAD-001  
-**Версия:** 0.2  
-**Статус:** Draft — Architecture Consistency Update  
+**Проект:** «Братья» / եղբայրներ
+**Документ:** SAD-001
+**Версия:** 0.2
+**Статус:** Draft — Architecture Consistency Update
 **Дата:** 19.11.2026
 
 ---

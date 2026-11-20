@@ -1,4 +1,5 @@
 # ADR-001 — Architecture Decision Records
+
 **Версия:** 1.1 | **Статус:** Approved по зафиксированным решениям
 
 1. **Transactional Outbox + Cloudflare Queues.** Бизнес-запись и outbox создаются одной DB-транзакцией; внешняя доставка после commit. Нужны idempotent consumers, retry/DLQ, reconciliation.

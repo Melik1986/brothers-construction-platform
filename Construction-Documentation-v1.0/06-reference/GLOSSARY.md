@@ -1,4 +1,5 @@
 # Glossary
+
 - **ADR:** Architecture Decision Record.
 - **Attribution snapshot:** минимальная информация об источнике лида при отправке формы.
 - **Correlation ID:** сквозная трассировка операции.

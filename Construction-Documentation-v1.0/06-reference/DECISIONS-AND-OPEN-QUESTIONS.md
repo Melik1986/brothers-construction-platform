@@ -1,6 +1,7 @@
 # Decisions & Open Questions
 
 ## Зафиксировано
+
 - «Братья» / «եղբայրներ», строительство и ремонт; Ереван, регионы, диаспора; Medium+ / Premium.
 - Услуги: ремонт, частные дома, отделка, интерьерный дизайн/3D, фасады, кровля, коммерческие объекты.
 - Языки hy/ru/en; Premium Architecture — Editorial Minimalism; Atelier Verrone как визуальный ориентир.
@@ -14,6 +15,7 @@
 - Separate environments/resources/secrets; Trunk-Based Development; protected main; migrations not on Worker startup.
 
 ## Open questions
+
 **Business/content:** legal entity/address/contacts, service area, verified guarantees, response SLA, approved case studies/media rights.
 **Brand/UX:** final logo, exact palette values, font families/licenses/glyph coverage, slogan, breakpoints, Figma designs.
 **Backend/data:** physical PK/FK, full columns/indexes, DTO/pagination/error catalog, internal auth, retention/deletion, incident/outbox states.
@@ -21,4 +23,5 @@
 **SEO/analytics:** keyword research by locale, GBP eligibility/address, analytics/consent, regional priorities.
 
 ## Boundary of current state
+
 Repository, source code, database, actual Drizzle schema and Figma mockups do not exist yet. All schemas here are specifications. Actual Drizzle verification happens after implementation exists.

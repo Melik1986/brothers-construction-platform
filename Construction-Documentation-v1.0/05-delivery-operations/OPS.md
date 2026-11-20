@@ -1,10 +1,10 @@
 # OPS-001 — Operations, Monitoring & Incident Response Runbook (Consolidated)
 
-**Project:** «Братья» / եղբայրներ  
-**Document ID:** OPS-001  
-**Version:** 0.4  
-**Status:** Draft — Consolidated Operational Specification  
-**Document Type:** Operations & Incident Response  
+**Project:** «Братья» / եղբայրներ
+**Document ID:** OPS-001
+**Version:** 0.4
+**Status:** Draft — Consolidated Operational Specification
+**Document Type:** Operations & Incident Response
 **Related Documents:** BRD-001, SRS-001, SAD-001, API-001, DATA-001, ADR-001, TEST-001, DEPLOY-001
 
 ---
@@ -1207,9 +1207,9 @@ OPS-001 готов к утверждению, если:
 
 ## 25. Document Status
 
-**Version:** 0.4  
-**Status:** Draft — Consolidated Operational Specification  
-**Owner:** Project Owner  
+**Version:** 0.4
+**Status:** Draft — Consolidated Operational Specification
+**Owner:** Project Owner
 **Approval:** Pending final technical validation
 
 Документ связан с SAD-001, ADR-001, API-001, DATA-001 и DEPLOY-001.

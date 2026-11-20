@@ -1,4 +1,5 @@
 # Manifest
+
 Markdown documents: 21
 
 - `01-business/BRD-001-v0.2.md` — 4303 bytes — SHA-256 `2c171ea7d2cf6ce5adf84c3ff2f2fb66690f41daa3f903c5e6bd640c33707775`

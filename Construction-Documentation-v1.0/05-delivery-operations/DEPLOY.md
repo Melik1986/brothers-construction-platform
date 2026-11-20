@@ -1,14 +1,14 @@
 # DEPLOY-001 — Deployment & Operations Specification
 
-**Project:** «Братья» / «եղբայրներ»  
-**Document ID:** DEPLOY-001  
-**Version:** 0.4  
-**Status:** Draft — Consolidated Specification  
-**Document Type:** Deployment, CI/CD & Operations Specification  
-**Related Documents:** BRD-001, SRS-001, SAD-001, API-001 / DATA-001, ADR-001, TEST-001  
-**Primary Infrastructure:** Cloudflare Workers, Neon PostgreSQL, Cloudflare R2  
-**Alternative Deployment Platform:** Vercel  
-**CI/CD:** GitHub Actions  
+**Project:** «Братья» / «եղբայրներ»
+**Document ID:** DEPLOY-001
+**Version:** 0.4
+**Status:** Draft — Consolidated Specification
+**Document Type:** Deployment, CI/CD & Operations Specification
+**Related Documents:** BRD-001, SRS-001, SAD-001, API-001 / DATA-001, ADR-001, TEST-001
+**Primary Infrastructure:** Cloudflare Workers, Neon PostgreSQL, Cloudflare R2
+**Alternative Deployment Platform:** Vercel
+**CI/CD:** GitHub Actions
 **Application Stack:** Astro, TypeScript, React Islands, SCSS, Drizzle ORM
 
 ---
@@ -1383,16 +1383,13 @@ DEPLOY-001 is considered implemented when:
 
 ## 23. Consolidated Deployment Decisions and Consistency Rules
 
-
 ### 23.1 Document Authority
 
 This revision consolidates the previous DEPLOY-001 v0.2 and DEPLOY-001 v0.3 drafts into one current specification. If an older copy conflicts with this document, this consolidated v0.4 is authoritative.
 
-
 ### 23.2 Deployment Scope
 
 The MVP deployment is a single primary Cloudflare Worker deployment with logical separation for:
-
 
 - Public API.
 - Internal API.
@@ -1405,9 +1402,7 @@ The MVP deployment is a single primary Cloudflare Worker deployment with logical
 - Scheduled Jobs.
 - Health Checks.
 
-
 Separate Workers per bot are not required for the MVP. Credentials, webhook endpoints, authorization scopes, and operational responsibilities remain isolated.
-
 
 ### 23.3 Two Telegram Bots — Deployment Requirements
 
@@ -1422,39 +1417,31 @@ Separate Workers per bot are not required for the MVP. Credentials, webhook endp
 
 Webhook-secret validation authenticates the webhook request. It does not replace authorization of the Telegram user issuing a command.
 
-
 ### 23.4 Webhook Endpoints
 
 The endpoints are:
-
 
 - Lead Management: `POST /api/v1/webhooks/telegram/leads`
 - Incident & Operations: `POST /api/v1/webhooks/telegram/incident`
 
 The deployed endpoint must verify the corresponding Telegram webhook secret before processing an update. Test and production webhook registrations must be separate.
 
-
 ### 23.5 Queues, Consumers, and Reconciliation
 
 The MVP logical queues are:
-
 
 - `lead-notifications`
 - `operations-events`
 
 The deferred `lead-commands` queue is not required for MVP. Staging and production must use isolated Queue resources and configuration.
 
-
 The target retry policy is five attempts including the initial attempt, with retry delays of 1, 5, 15, and 60 minutes, followed by DLQ handling. These intervals are targets and must be validated against Cloudflare Queues capabilities; unsupported behavior requires explicit application-level implementation rather than assumed platform behavior.
 
-
 Outbox reconciliation is targeted to run every five minutes. Reconciliation must be safe to repeat and must not create duplicate business actions. Consumers must use idempotency safeguards and delivery state.
-
 
 ### 23.6 Scheduled Jobs
 
 Scheduled responsibilities include:
-
 
 - Reminder scheduling and processing.
 - 2-hour and 24-hour follow-up checks.
@@ -1465,13 +1452,11 @@ Scheduled responsibilities include:
 
 The exact cron expressions, daily summary time, and timezone remain configuration decisions. Scheduled handlers must not be exposed as public HTTP endpoints.
 
-
 ### 23.7 Correlation and Event Envelope
 
 Correlation IDs must propagate across HTTP or Telegram ingress, application services, database/outbox records, queue messages, consumers, and external provider calls/logs where supported. A correlation ID is for tracing and must not contain personal information.
 
 The minimum event envelope includes:
-
 
 - `eventId`
 - `eventType`
@@ -1483,13 +1468,11 @@ The minimum event envelope includes:
 
 `eventId` identifies an event; `correlationId` groups a workflow; `idempotencyKey` prevents duplicate processing. They are not interchangeable. Incoming IDs must be validated and normalized at the boundary.
 
-
 ### 23.8 Outbox and External Delivery
 
 Database persistence and Outbox creation must occur within the same database transaction. Queue dispatch is asynchronous and is not assumed to be atomic with the database transaction. Reconciliation closes the gap between Outbox state and Queue delivery.
 
 External provider calls (Telegram, Resend) must occur outside database transactions. Delivery state and idempotency controls must prevent retries from repeating already completed business actions where the provider and operation permit.
-
 
 ### 23.9 Direct Alerts and AI Analysis
 
@@ -1497,18 +1480,15 @@ Direct operational alerts must remain independent of optional AI analysis. An AI
 
 AI analysis is optional and must receive only sanitized diagnostic context. It must not have direct database access, secrets, unrestricted production credentials, or authority to perform destructive production operations.
 
-
 ### 23.10 Database and Environment Boundaries
 
 Neon PostgreSQL is the source of truth. The deployment document defines migration execution and environment isolation; DATA-001 remains authoritative for database entities, fields, relationships, constraints, indexes, and schema-level decisions.
 
 A single Neon Project with separate staging and production branches is the approved initial topology. Separate credentials are required. Branches alone do not provide full project-level security isolation; access controls and resource limits must be verified.
 
-
 ### 23.11 Deployment Order and Compatibility
 
 The normal release order is:
-
 
 1. Validate the migration and application compatibility.
 2. Apply migration to staging.
@@ -1527,11 +1507,9 @@ The normal release order is:
 
 For breaking schema changes, use expand-and-contract. Do not deploy code that requires a schema not yet present, and do not remove compatibility fields until all consumers have moved.
 
-
 ### 23.12 Operational Readiness
 
 The release readiness checklist must include explicit verification of:
-
 
 - Both bot tokens and webhook secrets.
 - Webhook registration and secret validation.
@@ -1545,11 +1523,9 @@ The release readiness checklist must include explicit verification of:
 - Production approval.
 - Rollback and recovery procedures.
 
-
 ### 23.13 Scope and Status
 
 This document specifies the target deployment architecture and procedures. It does not assert that infrastructure, pipelines, migrations, bots, monitoring, backup policies, or restore procedures have already been implemented or tested. Implementation status must be verified in the repository and provider configuration.
-
 
 ## 24. Document Boundaries
 
@@ -1558,7 +1534,6 @@ This document specifies the target deployment architecture and procedures. It do
 - **DATA-001** is the source of truth for database schema, entities, fields, indexes, constraints, and relationships.
 - **OPS-001** is the source of truth for operational runbooks, incident response, alert handling, and routine maintenance procedures.
 - **TEST-001** is the source of truth for test strategy, test scope, and quality validation approach.
-
 
 ## 25. Related Documents
 
@@ -1578,7 +1553,6 @@ This document specifies the target deployment architecture and procedures. It do
 - TEST-001 — Testing Strategy.
 - IMPLEMENTATION-001 — Implementation Plan.
 
-
 ## Change Log
 
 | Version | Date | Changes |
@@ -1588,7 +1562,5 @@ This document specifies the target deployment architecture and procedures. It do
 | 0.3 | 2026-11-19 | Added two Telegram bots, isolated webhook credentials, Queue resources, Scheduled Worker, Correlation ID, Direct Alert, deployment order, production validation, and readiness checklist. |
 | 0.4 | 2026-11-20 | Consolidated v0.2 and v0.3 into one expanded specification; clarified deployment boundaries, webhook authorization, Outbox/Queue reconciliation, idempotency, AI-independent alerts, environment isolation, and implementation status. |
 
-
-**Current version:** 0.4 — Consolidated Specification  
+**Current version:** 0.4 — Consolidated Specification
 **Status:** Draft — requires implementation verification and project-owner/technical-lead approval.
-
