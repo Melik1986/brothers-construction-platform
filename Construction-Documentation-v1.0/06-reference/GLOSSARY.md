@@ -1,0 +1,15 @@
+# Glossary
+- **ADR:** Architecture Decision Record.
+- **Attribution snapshot:** минимальная информация об источнике лида при отправке формы.
+- **Correlation ID:** сквозная трассировка операции.
+- **DLQ:** Dead Letter Queue.
+- **GEO:** Generative Engine Optimization.
+- **Idempotency key:** ключ предотвращения повторного бизнес-эффекта.
+- **Lead:** потенциальный клиент/обращение.
+- **Outbox:** таблица событий, ожидающих внешней доставки.
+- **RPO:** допустимая потеря данных во времени.
+- **RTO:** целевое время восстановления.
+- **SSG:** Static Site Generation.
+- **Turnstile:** Cloudflare anti-bot challenge.
+- **Webhook secret:** секрет проверки подлинности webhook-запроса.
+- **Worker:** Cloudflare Workers runtime.
