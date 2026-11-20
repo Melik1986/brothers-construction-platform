@@ -1,0 +1,3 @@
+[default.extend-words]
+# Domain acronyms that the typos dictionary flags as misspellings.
+RTO = "RTO" # Recovery Time Objective

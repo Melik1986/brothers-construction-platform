@@ -1,0 +1,11 @@
+# rumdl configuration for the Brothers documentation repository.
+# The documentation set uses long table lines, raw HTML blocks and
+# emphasis-based pseudo-headings as an established style, so the
+# stylistic rules below are disabled. Structural rules stay enforced.
+
+disable = [
+    "MD013", # line-length: tables and spec lines are intentionally long
+    "MD033", # inline HTML: README and docs use HTML layout blocks
+    "MD036", # emphasis-as-heading: docs use bold pseudo-headings
+    "MD041", # first-line-heading: README starts with an HTML badge block
+]

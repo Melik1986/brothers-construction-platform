@@ -1,0 +1,81 @@
+amends "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Builtins.pkl"
+// Using a coding agent? See https://hk.jdx.dev/agents
+
+local markdownGlob = List("**/*.md", "**/*.markdown")
+
+hooks {
+    ["pre-commit"] {
+        fix = true
+        stage = true
+        steps {
+            ["trailing-whitespace"] = Builtins.trailing_whitespace
+            ["newlines"] = Builtins.newlines
+            ["mixed-line-ending"] = Builtins.mixed_line_ending
+            ["byte-order-marker"] = Builtins.byte_order_marker
+            ["check-merge-conflict"] = Builtins.check_merge_conflict
+            ["check-case-conflict"] = Builtins.check_case_conflict
+            ["destroyed-symlinks"] = Builtins.destroyed_symlinks
+            ["detect-private-key"] = Builtins.detect_private_key
+            ["check-added-large-files"] = Builtins.check_added_large_files
+            ["rumdl-format"] = (Builtins.rumdl_format) {
+                glob = markdownGlob
+            }
+            ["rumdl"] = (Builtins.rumdl) {
+                glob = markdownGlob
+            }
+            ["typos"] = Builtins.typos
+            ["betterleaks"] = Builtins.betterleaks
+        }
+    }
+
+    ["commit-msg"] {
+        steps {
+            ["conventional-commit"] = Builtins.check_conventional_commit
+        }
+    }
+
+    ["pre-push"] {
+        steps {
+            ["rumdl"] = (Builtins.rumdl) {
+                glob = markdownGlob
+            }
+            ["typos"] = Builtins.typos
+            ["betterleaks"] = Builtins.betterleaks
+        }
+    }
+
+    ["check"] {
+        steps {
+            ["trailing-whitespace"] = Builtins.trailing_whitespace
+            ["newlines"] = Builtins.newlines
+            ["mixed-line-ending"] = Builtins.mixed_line_ending
+            ["byte-order-marker"] = Builtins.byte_order_marker
+            ["check-merge-conflict"] = Builtins.check_merge_conflict
+            ["check-case-conflict"] = Builtins.check_case_conflict
+            ["destroyed-symlinks"] = Builtins.destroyed_symlinks
+            ["detect-private-key"] = Builtins.detect_private_key
+            ["check-added-large-files"] = Builtins.check_added_large_files
+            ["rumdl"] = (Builtins.rumdl) {
+                glob = markdownGlob
+            }
+            ["typos"] = Builtins.typos
+            ["betterleaks"] = Builtins.betterleaks
+            ["lychee"] = (Builtins.lychee) {
+                glob = markdownGlob
+            }
+        }
+    }
+
+    ["fix"] {
+        steps {
+            ["trailing-whitespace"] = Builtins.trailing_whitespace
+            ["newlines"] = Builtins.newlines
+            ["mixed-line-ending"] = Builtins.mixed_line_ending
+            ["byte-order-marker"] = Builtins.byte_order_marker
+            ["rumdl-format"] = (Builtins.rumdl_format) {
+                glob = markdownGlob
+            }
+        }
+    }
+}

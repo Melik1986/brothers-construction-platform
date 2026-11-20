@@ -1,0 +1,8 @@
+[tools]
+node = "26.13.1"
+pnpm = "12.21.0"
+hk = { version = "2.13.0", workflow = "release.yml" }
+rumdl = "0.3.5"
+typos = "1.52.2"
+betterleaks = "1.10.1"
+lychee = "0.24.2"

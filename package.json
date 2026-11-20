@@ -1,0 +1,11 @@
+{
+  "name": "brothers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "check": "hk check --all",
+    "fix": "hk fix --all"
+  }
+}
